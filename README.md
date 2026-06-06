@@ -23,8 +23,7 @@ It is designed for **audit reviews, retrospective analysis, and QA validation** 
 
 ## 🧩 Source Table: AUDIT_CASE_POOL
 All sampling operations originate from the `AUDIT_CASE_POOL` table, which stores the complete pool of cases available for audit.  
-Each record represents a pharmacovigilance case with attributes like case number, report type, product, and seriousness classification.
-
+Each record represents a pharmacovigilance case with attributes like case_id, case number, report type, product_name, receipt_date and country_code
 The random sampling logic uses this table to:
 - Generate random values per case  
 - Rank cases within each report type  
