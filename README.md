@@ -62,11 +62,30 @@ LICENSE
 ---
 
 # 📈 Example Output
-| Review Status | Sampling Round | Count |
-|---------------|----------------|-------|
-| NEW           | 2              | 120   |
-| EXISTING      | 2              | 45    |
+The following output shows sampled cases saved to the audit tracking table after running the MERGE statement. Each case is assigned an AUDIT_ID, flagged with REVIEW_STATUS, and tracked with SAMPLING_ROUND for full audit traceability.
 
+| AUDIT_ID | CASE_NUMBER    | REPORT_TYPE      | SAMPLE_DATE         | SAMPLING_ROUND | AUDIT_STATUS | REVIEW_STATUS |
+|----------|----------------|------------------|---------------------|----------------|--------------|---------------|
+| 9        | CT-2024-A001   | CLINICAL_TRIAL   | 6/6/2026, 5:35:22   | 1              | PENDING      | EXISTING      |
+| 18       | CT-2024-D040   | CLINICAL_TRIAL   | 6/6/2026, 5:35:22   | 1              | PENDING      | EXISTING      |
+| 3        | CT-2024-A009   | CLINICAL_TRIAL   | 6/6/2026, 5:35:22   | 1              | PENDING      | EXISTING      |
+| 19       | CT-2024-B019   | CLINICAL_TRIAL   | 6/6/2026, 5:35:22   | 1              | PENDING      | EXISTING      |
+| 5        | CT-2024-C027   | CLINICAL_TRIAL   | 6/6/2026, 5:35:22   | 1              | PENDING      | EXISTING      |
+| 13       | CT-2024-D036   | CLINICAL_TRIAL   | 6/6/2026, 5:35:22   | 1              | PENDING      | EXISTING      |
+| 7        | PM-2024-A002   | POST_MARKETING   | 6/6/2026, 5:35:22   | 1              | PENDING      | EXISTING      |
+| 4        | PM-2024-C028   | POST_MARKETING   | 6/6/2026, 5:35:22   | 1              | PENDING      | EXISTING      |
+| 11       | PM-2024-B018   | POST_MARKETING   | 6/6/2026, 5:35:22   | 1              | PENDING      | EXISTING      |
+| 20       | PM-2024-B011   | POST_MARKETING   | 6/6/2026, 5:35:22   | 1              | PENDING      | EXISTING      |
+| 14       | PM-2024-C024   | POST_MARKETING   | 6/6/2026, 5:35:22   | 1              | PENDING      | EXISTING      |
+
+## Sample Size Summary
+
+| Report Type      | Total Cases | Sampling % | Cases Selected |
+|------------------|-------------|------------|----------------|
+| CLINICAL_TRIAL   | 40          | 15%        | 6              |
+| POST_MARKETING   | 35          | 20%        | 7              |
+| SPONTANEOUS      | 25          | 30%        | 8              |
+| **Total**        | **100**     |            | **21**         |
 ---
 
 # 🎯 Why This Project Matters
